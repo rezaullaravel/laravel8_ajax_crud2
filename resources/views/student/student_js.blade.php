@@ -209,8 +209,8 @@ $.ajax({
    $(document).on('click','.pagination a',function(e){
     e.preventDefault();
 
-    let page=$(this).attr('href').split('page=')[1]
-    pagination(page)
+    let page=$(this).attr('href').split('page=')[1];
+    pagination(page);
    });
 
 
