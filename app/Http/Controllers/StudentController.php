@@ -8,7 +8,7 @@ use App\Models\Student;
 class StudentController extends Controller
 {
     public function index(){
-        $students=Student::orderBy('id','desc')->paginate(4);
+        $students=Student::orderBy('id','desc')->paginate(5);
         return view('student.index',compact('students'));
     }//end method
 
@@ -81,7 +81,7 @@ class StudentController extends Controller
 
     //pagination
     public function pagination(){
-        $students=Student::orderBy('id','desc')->paginate(4);
+        $students=Student::orderBy('id','desc')->paginate(5);
         return view('student.pagination',compact('students'))->render();
     }//end method
 
@@ -91,7 +91,7 @@ class StudentController extends Controller
         $students=Student::where('name','like','%'.$request->search_string.'%')
                  ->orWhere('email','like','%'.$request->search_string.'%')
                  ->orderBy('id','desc')
-                 ->paginate(5);
+                 ->paginate(8);
 
         if(count($students)>0){
             return view('student.pagination',compact('students'))->render();
