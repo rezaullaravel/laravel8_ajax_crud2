@@ -19,7 +19,8 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h3>Student List(Laravel ajax crud)
-                    <a href="" class="btn btn-success" data-toggle="modal" data-target="#addModal" style="float:right;">Add Student</a>
+                    <a href="{{route('teacher.show')}}" class="btn btn-primary btn-sm" style="float:right;">Ajax Image crud</a>||
+                    <a href="" class="btn btn-success btn-sm" data-toggle="modal" data-target="#addModal" style="float:right;">Add Student</a>
                 </h3>
 
 
